@@ -19,7 +19,7 @@ namespace API.Controllers
         [HttpPost]
         public async Task<IActionResult> Add([FromBody] ProductDto dto)
         {
-            var result = await _productService.Add(dto);
+            var result = await _productService.Nh_Add(dto);
             return Ok(result);
         }
     }

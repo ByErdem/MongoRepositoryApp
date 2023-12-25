@@ -8,8 +8,7 @@ using System.Linq.Expressions;
 
 namespace Shared.Data.Concrete.MongoDB
 {
-    public class MongoEntityRepositoryBase<TEntity> : IMongoRepository<TEntity>
-        where TEntity : class, IDBEntity, new()
+    public class MongoEntityRepositoryBase<TEntity> : IEntityRepository<TEntity> where TEntity : class, IDBEntity, new()
     {
         private readonly IConfiguration _config;
         private readonly IMongoCollection<TEntity> _entity;

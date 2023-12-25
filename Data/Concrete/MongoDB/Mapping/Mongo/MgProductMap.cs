@@ -4,16 +4,16 @@ using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.IdGenerators;
 using MongoDB.Bson.Serialization.Serializers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Data.Concrete.MongoDB.Mapping
+namespace Data.Concrete.MongoDB.Mapping.Mongo
 {
-    public class ProductMap:IClassMapping
+    public class MgProductMap : IClassMapping
     {
+        public MgProductMap()
+        {
+            RegisterMappings();
+        }
+
         public void RegisterMappings()
         {
             BsonClassMap.RegisterClassMap<Product>(x =>

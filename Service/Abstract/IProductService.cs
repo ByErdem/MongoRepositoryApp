@@ -9,6 +9,7 @@ namespace Service.Abstract
 {
     public interface IProductService
     {
-        Task<ResponseDto<bool>> Add(ProductDto dto);
+        Task<ResponseDto<bool>> Nh_Add(ProductDto dto);
+        Task<ResponseDto<bool>> Mg_Add(ProductDto dto);
     }
 }
