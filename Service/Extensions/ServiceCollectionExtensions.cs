@@ -1,6 +1,6 @@
 ﻿using Data.Abstract;
 using Data.Concrete;
-using Data.Concrete.MongoDB.Mapping.Mongo;
+using Data.Concrete.Mapping.Mongo;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using Microsoft.Extensions.Configuration;

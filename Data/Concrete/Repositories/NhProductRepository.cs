@@ -3,7 +3,7 @@ using Entity.Concrete;
 using NHibernate;
 using Shared.Data.Concrete.NHibernate;
 
-namespace Data.Concrete.MongoDB.Repositories
+namespace Data.Concrete.Repositories
 {
     public class NhProductRepository : NhEntityRepositoryBase<Product>, IProductRepository
     {

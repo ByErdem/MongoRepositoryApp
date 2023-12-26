@@ -2,9 +2,9 @@
 using Entity.Concrete;
 using FluentNHibernate.Mapping;
 
-namespace Data.Concrete.MongoDB.Mapping.NHibernate
+namespace Data.Concrete.Mapping.NHibernate
 {
-    public class NhProductMap:ClassMap<Product>, IClassMapping
+    public class NhProductMap : ClassMap<Product>, IClassMapping
     {
         public NhProductMap()
         {

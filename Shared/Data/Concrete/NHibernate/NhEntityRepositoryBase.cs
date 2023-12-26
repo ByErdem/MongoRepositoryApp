@@ -57,6 +57,11 @@ namespace Shared.Data.Concrete.NHibernate
             return await session.Query<TEntity>().FirstOrDefaultAsync(predicate);
         }
 
+        public Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] includeProperties)
+        {
+            return null;
+        }
+
         public async Task<TEntity> UpdateAsync(TEntity entity)
         {
             using var session = _sessionFactory.OpenSession();

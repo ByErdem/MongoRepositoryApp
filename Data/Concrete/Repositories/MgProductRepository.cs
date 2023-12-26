@@ -3,7 +3,7 @@ using Entity.Concrete;
 using Microsoft.Extensions.Configuration;
 using Shared.Data.Concrete.MongoDB;
 
-namespace Data.Concrete.MongoDB.Repositories
+namespace Data.Concrete.Repositories
 {
     public class MgProductRepository : MongoEntityRepositoryBase<Product>, IProductRepository
     {

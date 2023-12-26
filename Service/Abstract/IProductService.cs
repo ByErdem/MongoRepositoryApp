@@ -11,5 +11,6 @@ namespace Service.Abstract
     {
         Task<ResponseDto<bool>> Nh_Add(ProductDto dto);
         Task<ResponseDto<bool>> Mg_Add(ProductDto dto);
+        Task<ResponseDto<bool>> Ef_Add(ProductDto dto);
     }
 }

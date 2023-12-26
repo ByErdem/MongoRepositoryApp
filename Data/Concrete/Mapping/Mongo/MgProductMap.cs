@@ -5,7 +5,7 @@ using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.IdGenerators;
 using MongoDB.Bson.Serialization.Serializers;
 
-namespace Data.Concrete.MongoDB.Mapping.Mongo
+namespace Data.Concrete.Mapping.Mongo
 {
     public class MgProductMap : IClassMapping
     {

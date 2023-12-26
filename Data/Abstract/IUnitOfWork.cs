@@ -4,5 +4,6 @@
     {
         IProductRepository MgProducts { get; }
         IProductRepository NhProducts { get; }
+        IProductRepository EfProducts { get; }
     }
 }

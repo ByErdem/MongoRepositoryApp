@@ -74,6 +74,11 @@ namespace Shared.Data.Concrete.MongoDB
             return await _entity.Find(predicate).FirstOrDefaultAsync();
         }
 
+        public Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> predicate, params Expression<Func<TEntity, object>>[] includeProperties)
+        {
+            return null;
+        }
+
         public async Task<TEntity> UpdateAsync(TEntity entity)
         {
             var idProperty = typeof(TEntity).GetProperty("Id") ?? typeof(TEntity).GetProperty("_id");

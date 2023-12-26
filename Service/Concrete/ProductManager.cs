@@ -54,5 +54,10 @@ namespace Service.Concrete
             rsp.ResultStatus = ResultStatus.Success;
             return rsp;
         }
+
+        public Task<ResponseDto<bool>> Ef_Add(ProductDto dto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

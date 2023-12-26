@@ -10,6 +10,7 @@ namespace Shared.Data.Abstract
         Task<int> CountAsync(Expression<Func<T, bool>> predicate);
         Task DeleteAsync(T entity);
         Task<IList<T>> GetAllAsync(Expression<Func<T, bool>> predicate = null);
+        Task<T> GetAsync(Expression<Func<T, bool>> predicate, params Expression<Func<T, object>>[] includeProperties);
         Task<T> GetAsync(Expression<Func<T, bool>> predicate);
         Task<T> UpdateAsync(T entity);
     }
