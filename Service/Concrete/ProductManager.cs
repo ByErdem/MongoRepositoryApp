@@ -55,9 +55,24 @@ namespace Service.Concrete
             return rsp;
         }
 
-        public Task<ResponseDto<bool>> Ef_Add(ProductDto dto)
+        public async Task<ResponseDto<bool>> Ef_Add(ProductDto dto)
         {
-            throw new NotImplementedException();
+            var rsp = new ResponseDto<bool>();  
+            var product = await _uow.EfProducts.GetAsync(x=>x.Name == dto.Name);
+            if (product == null)
+            {
+                await _uow.MgProducts.AddAsync(new Product
+                {
+                    Name = dto.Name,
+                    Quantity = dto.Quantity,
+                    Value = dto.Value,
+                });
+            }
+
+            rsp.SuccessMessage = "Ürün başarılı bir şekilde eklendi.";
+            rsp.Data = true;
+            rsp.ResultStatus = ResultStatus.Success;
+            return rsp;
         }
     }
 }
