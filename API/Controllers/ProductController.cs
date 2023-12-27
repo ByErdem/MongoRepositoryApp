@@ -20,6 +20,7 @@ namespace API.Controllers
         public async Task<IActionResult> Add([FromBody] ProductDto dto)
         {
             var result = await _productService.Nh_Add(dto);
+            result = await _productService.Ef_Add(dto);
             return Ok(result);
         }
     }
